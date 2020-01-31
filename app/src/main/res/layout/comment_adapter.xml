@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_comment_adapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView_comment_adapter"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/app_icon"
+            android:layout_marginTop="10dp"
+             />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_description_comment_adapter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/imageView_comment_adapter"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    fontPath="myfonts/Poppins-SemiBold_0.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:ignore="MissingPrefix" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView_comment_adapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:includeFontPadding="false"
+                android:text="@string/app_name"
+                android:textSize="12sp"
+                android:textColor="@color/gray" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="@color/line" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

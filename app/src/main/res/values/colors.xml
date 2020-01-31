@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FE4537</color>
+    <color name="colorPrimaryDark">#D9392D</color>
+    <color name="colorAccent">#FE4537</color>
+
+    <color name="bg">#E7E7E7</color>
+    <color name="comment_bg">#ffffff</color>
+    <color name="white_bg">#ffffff</color>
+     <color name="white">#FFFFFF</color>
+    <color name="white_light">#e2e4e7</color>
+    <color name="black">#313131</color>
+    <color name="gray">#7A7B7D</color>
+    <color name="gray_light">#cdced1</color>
+    <color name="orange">#FE4537</color>
+    <color name="image_news_bg">#000000</color>
+
+    <color name="navigation_default">#6A6A6A</color>
+    <color name="navigation_checked">#FE4537</color>
+
+    <color name="non_select_dot">#6A6A6A</color>
+    <color name="select_dot">#FE4537</color>
+
+    <color name="about_title">#353535</color>
+    <color name="about_text">#8b8b8b</color>
+
+    <color name="view_login">#ffffff</color>
+    <color name="gray_line">#7A7B7D</color>
+    <color name="line">#ECECEC</color>
+
+    <color name="switch_activated">#FE4537</color>
+    <color name="switch_normal">#888D9F</color>
+    <color name="dialog_color">#FE4537</color>
+    <color name="dialog_text">#353535</color>
+    <color name="dialog_white_text">#FFFFFF</color>
+</resources>

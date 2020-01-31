@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                 <RelativeLayout
+                    android:id="@+id/sec_slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <com.example.util.EnchantedViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp" />
+
+                </RelativeLayout>
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/indicator_unselected_background"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/sec_slider"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    app:ci_drawable="@drawable/selecteditem_dot"
+                    app:ci_drawable_unselected="@drawable/nonselecteditem_dot"
+                    app:ci_height="6dp"
+                    app:ci_width="6dp" />
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardElevation="3dp"
+                card_view:cardCornerRadius="0dp"
+                 card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                          android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/txt_latest_cat_home"
+                            fontPath="myfonts/Poppins-SemiBold_0.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                             android:text="@string/home_category"
+                            android:layout_marginStart="6dp"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:ignore="MissingPrefix" />
+
+                        <Button
+                            android:id="@+id/btn_latest_cat"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:elevation="10dp"
+                            fontPath="myfonts/Poppins-SemiBold_0.ttf"
+                            tools:ignore="MissingPrefix"
+                            android:text="@string/home_all"
+                            android:layout_marginEnd="8dp"
+                            android:textAllCaps="false"
+                            android:gravity="center|end"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                          android:layout_marginTop="10dp"
+                        android:background="@color/line" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="4dp">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_latest_cat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:id="@+id/home_view_1"
+                            android:layout_width="30dp"
+                            android:layout_height="90dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                             android:background="@drawable/bg_gradient_home_shadow_white_left" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardElevation="3dp"
+                card_view:cardCornerRadius="0dp"
+                android:layout_marginTop="10dp"
+                 card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/txt_latest_top_home"
+                            fontPath="myfonts/Poppins-SemiBold_0.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/home_top"
+                            android:layout_marginStart="6dp"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:ignore="MissingPrefix" />
+
+                        <Button
+                            android:id="@+id/btn_latest_top"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:elevation="10dp"
+                            android:text="@string/home_all"
+                            fontPath="myfonts/Poppins-SemiBold_0.ttf"
+                            tools:ignore="MissingPrefix"
+                            android:layout_marginEnd="8dp"
+                            android:textAllCaps="false"
+                            android:gravity="center|end"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/line" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="4dp">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_latest_top"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:id="@+id/home_view_2"
+                            android:layout_width="30dp"
+                            android:layout_height="160dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/bg_gradient_home_shadow_white_left" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                card_view:cardBackgroundColor="@color/white"
+                card_view:cardElevation="3dp"
+                card_view:cardCornerRadius="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                card_view:cardPreventCornerOverlap="false"
+                card_view:cardUseCompatPadding="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:id="@+id/txt_latest_latest_home"
+                            fontPath="myfonts/Poppins-SemiBold_0.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="@string/home_latest"
+                            android:layout_marginStart="6dp"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:ignore="MissingPrefix" />
+
+                        <Button
+                            android:id="@+id/btn_home_latest"
+                            style="?android:attr/buttonBarButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            fontPath="myfonts/Poppins-SemiBold_0.ttf"
+                            tools:ignore="MissingPrefix"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@android:color/transparent"
+                            android:elevation="10dp"
+                            android:text="@string/home_all"
+                            android:layout_marginEnd="8dp"
+                            android:textAllCaps="false"
+                            android:gravity="center|end"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/line" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginStart="4dp">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_latest_home"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
